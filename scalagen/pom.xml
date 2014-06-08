@@ -38,21 +38,14 @@
   
   <profiles>
     <profile>
-      <id>scala-2.9.x</id>
+      <id>scala-2.11.x</id>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
+
       <properties>
-        <scala.version>2.9.3</scala.version>
-        <scalaArm.scalaVersion>2.9.2</scalaArm.scalaVersion>
-      </properties>
-    </profile>
-    
-    <profile>
-      <id>scala-2.10.x</id>
-      <properties>
-        <scala.version>2.10.1</scala.version>
-        <scalaArm.scalaVersion>2.10</scalaArm.scalaVersion>
+        <scala.version>2.11.1</scala.version>
+        <scalaArm.scalaVersion>2.11</scalaArm.scalaVersion>
       </properties>
     </profile>
   </profiles>
@@ -116,7 +109,7 @@
     <dependency>
       <groupId>com.jsuereth</groupId>
       <artifactId>scala-arm_${scalaArm.scalaVersion}</artifactId>
-      <version>1.3</version>
+      <version>1.4</version>
       <scope>test</scope>
     </dependency>   
             
@@ -136,7 +129,7 @@
             </goals>
             <configuration>
               <args>
-                <arg>-make:transitivenocp</arg>
+                <!-- <arg>-make:transitivenocp</arg> -->
                 <arg>-dependencyfile</arg>
                 <arg>${project.build.directory}/.scala_dependencies</arg>
               </args>
